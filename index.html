@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Assignment Management App</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/4c42b57f63.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div class="container">
+      <div>
+        <i class="fa-solid fa-plus fa-lg"></i>
+      <button class="hello default" onclick="callForDisplay(0)">Add Assignment</button>
+    </div>
+    <div>
+      <i class="fa-solid fa-clock-rotate-left fa-sm"></i>
+      <button class="hello" onclick="callForDisplay(1)">Past Due</button>
+    </div>
+    <div>
+      <i class="fa-brands fa-stack-overflow fa-lg"></i>
+      <button class="hello" onclick="callForDisplay(2)">Upcoming</button>
+    </div>
+     </div>
+    <div class="add-assign">
+      <div id="firstPage" class="form">
+        <form action="#">
+          
+          Title<input class="input" name="title" type="text" id="text">
+          Description<input class="input" type="text" name="description" id="description">
+          Batch Name<input class="input" type="text" name="batchName" id="batch">
+          
+          Due Date<input class="input" type="date" name="dueDate" id="due">
+          <input type="button" value="Submit" onclick="validate()" id="submit">
+        </form>
+      </div>
+      <div id="secondPage" class="table form">
+        <table id="pastTable">
+          <caption>
+            <h2>Past Assignments</h2>
+          </caption>
+          <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Batch Name</th>
+            <th>Due Date</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div id="thirdPage" class="table form">
+        <table id="futureTable">
+          <caption>
+            <h2>Future Assignments</h2>
+          </caption>
+          <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Batch Name</th>
+            <th>Due Date</th>
+          </thead>
+          <tbody>
+          </tbody>
+          <button id="btn-delete" onclick="Delete()">Delete</button>
+        </table>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script src="index.js" theme="blue" defer></script>
+
+</html>
